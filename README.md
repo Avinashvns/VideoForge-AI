@@ -2,5 +2,17 @@
 
 AI Powered Educational Video Production Studio
 
-Status:
-Phase 1
+Workflow:
+
+Script
+↓
+
+Voice Recording
+
+↓
+
+Images
+
+↓
+
+Video

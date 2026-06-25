@@ -1,16 +1,27 @@
-from pathlib import Path
+from app.script import ScriptProcessor
 
 
 def main():
+
+    processor = ScriptProcessor()
+
+    script = processor.process(
+        "assets/scripts/script.txt"
+    )
+
     print("=" * 50)
-    print("🚀 VideoForge AI")
+    print(script.title)
     print("=" * 50)
 
-    project_root = Path(__file__).parent
+    for paragraph in script.paragraphs:
 
-    print(f"Project Root : {project_root}")
+        print(f"\nParagraph {paragraph.id}")
 
-    print("\nProject Started Successfully")
+        for sentence in paragraph.sentences:
+
+            print(
+                f"  [{sentence.id}] {sentence.text}"
+            )
 
 
 if __name__ == "__main__":
